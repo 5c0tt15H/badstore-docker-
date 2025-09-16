@@ -16,8 +16,9 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 USE `mysql`;
-update user set password=PASSWORD("secret") where User='root';
-flush privileges;
+ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password;
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('secret');
+FLUSH PRIVILEGES;
 --
 -- Current Database: `badstoredb`
 --
