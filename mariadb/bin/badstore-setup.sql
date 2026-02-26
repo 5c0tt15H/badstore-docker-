@@ -19,6 +19,9 @@ USE `mysql`;
 ALTER USER 'root'@'localhost' IDENTIFIED VIA mysql_native_password;
 SET PASSWORD FOR 'root'@'localhost' = PASSWORD('secret');
 FLUSH PRIVILEGES;
+CREATE USER 'root'@'%' IDENTIFIED BY 'secret'; 
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
 --
 -- Current Database: `badstoredb`
 --
