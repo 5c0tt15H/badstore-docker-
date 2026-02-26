@@ -1,0 +1,16 @@
+[server]
+
+[mariadb]
+
+pid-file               = /run/mysqld/mysqld.pid
+basedir                = /usr
+
+bind-address           = 0.0.0.0
+
+expire_logs_days       = 10
+
+[embedded]
+
+[mariadb]
+
+[mariadb-11.8]
